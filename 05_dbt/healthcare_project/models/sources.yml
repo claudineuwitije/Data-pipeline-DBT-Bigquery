@@ -6,7 +6,7 @@ version: 2
 sources:
   - name: healthcare_data
     database: healthcare-data-project-499612
-    schema: "{{ var('schema_name', 'dev_healthcare_project_data') }}"
+    schema: "{{ var('schema_name', 'dev_healthcare_project_data') }}" 
     tables:
       - name: patient_data_external
         description: "External table for patient demographic data in GCS."
