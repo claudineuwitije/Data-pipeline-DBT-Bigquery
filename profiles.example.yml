@@ -1,0 +1,27 @@
+healthcare_dbt_bigquery_data_pipeline: ## Must match "profile" in dbt_project.yml
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: your-project-id # must be your project id
+      dataset: your-dev-dataset # must be the name of your dataset
+      threads: 4
+      keyfile: C:\path\to\your\service-account.json # update the path depeing on where your key is stored locally
+      location: europe-west3
+      priority: interactive
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+
+    prod:
+      type: bigquery
+      method: service-account
+      project: your-project-id # must be your project id
+      dataset: your-prod-dataset # must be the name of your dataset
+      threads: 4
+      keyfile: C:\path\to\your\service-account.json # update the path depeing on where your key is stored locally
+      location: europe-west3
+      priority: interactive
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+
+  target: dev
