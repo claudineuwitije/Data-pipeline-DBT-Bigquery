@@ -47,7 +47,9 @@ git stash pop # Restore your work  # In this case restore them on the new branch
 python3 -m venv venv  # HERE THE NAME OF THE VM is venv
 
 #ACTIVATE the VM
-.\venv\Scripts\activate
+.\venv\Scripts\activate   
+                        # where venv is the name of the virtual environment,
+                        # in our case , the name is "healthcareproject"
 
 # In the new environment created, install the following in this order for dbt project 
 pip install -r requirement.txt   # install dbt Dependencies such as dbt-core , pandas, google-cloud-bigquery etc.

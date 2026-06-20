@@ -7,7 +7,10 @@ venv/
 __pycache__/
 *.pyc
 
-# dbt
+# dbt  dbt local config / artifacts
+profiles.yml
+.user.yml
 target/
 logs/
 dbt_packages/
+dbt_internal_packages/
